@@ -1,0 +1,443 @@
+
+
+body {
+   font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+   scroll-behavior: smooth;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   overflow-x: hidden;
+}
+#home {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0,0,0,0)), url('../img/tkj2.jpg');
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0;
+   margin: 0;
+   margin-top: 0;
+}
+
+.landing {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+
+/* Full section width */
+section {
+   width: 100%;
+   padding: 60px 20px ;
+}
+
+.nav-link {
+   color: #007bff;
+}
+.nav-link:hover {
+   color: white;
+}
+
+.button {
+   background-color: white;
+   color: black;
+   padding: 10px 20px;
+   border-radius: 5px;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.button:hover {
+   background-color: rgb(78, 70, 70);
+   color: white;
+}
+
+/* === NAVBAR FIXED TOP SPACE HANDLER === */
+body::before {
+   content: "";
+   display: block;
+   height: 70px; /* agar konten tidak ketiban navbar */
+}
+
+/* === TENTANG KAMI === */
+.tentangkami {
+   background-color:linear-gradient(to right, #f0f8ff, #e0ecff);
+   height: 100vh;
+   width: 100%;
+}
+
+.container-tentang {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   align-items: center;
+   justify-content: center;
+}
+
+.tentang-img {
+   flex: 1 1 40%;
+   text-align: center;
+}
+
+.tentang-img img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tentang-text {
+   flex: 1 1 50%;
+}
+
+.tentang-text h2 {
+   font-size: 2rem;
+   margin-bottom: 20px;
+   color: #333;
+}
+
+.tentang-text p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+   line-height: 1.6;
+}
+
+.tentang-text h3 {
+   margin-top: 30px;
+   color: #222;
+}
+
+.tentang-text ul {
+   padding-left: 20px;
+   color: #444;
+}
+
+.tentang-text ul li {
+   margin-bottom: 10px;
+}
+
+/* === GALERI FOTO === */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.galeri-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.galeri-item:hover {
+   background-color: #444;
+    transform: scale(1.03);
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+ .form-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .edit-box {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 30px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .edit-box:hover {
+        background-color: #f1f1f1;
+    }
+
+    .edit-label {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .edit-form {
+        display: none;
+        margin-top: 15px;
+    }
+
+    .edit-box.open .edit-form {
+        display: block;
+    }
+
+    
+
+/* === DAFTAR SISWA GRID === */
+.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+}
+
+.grid-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      text-decoration: none;
+      color: black;
+}
+
+.grid-item:hover {
+      background:rgb(78, 70, 70);
+      transform: scale(1.03);
+}
+
+.wa-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.wa-icon {
+    width: 80%;
+    right: 20px;
+    height: 100%;
+    padding: 10px;
+}
+
+/* === UPLOAD & UBAH BIODATA BOX === */
+.edit-box {
+    cursor: pointer;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    background-color: #f5f9ff;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.edit-label {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.edit-form {
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0.95);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.edit-box.open {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+    border-color: #0056b3;
+}
+
+.edit-box.open .edit-form {
+    max-height: 500px;
+    opacity: 1;
+    transform: scaleY(1);
+    margin-top: 20px;
+    pointer-events: auto;
+}
+
+.edit-box.open .edit-label {
+    transform: scale(0.9) translateY(-10px);
+    color: #333;
+}
+
+/* === FOTO PROFIL SISWA === */
+img.rounded-circle {
+    border: 4px solid #007bff;
+    background-color: white;
+    padding: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .edit-box {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .edit-form input,
+    .edit-form textarea {
+        font-size: 14px;
+    }
+
+    .edit-label {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+   .container-tentang {
+      flex-direction: column;
+      text-align: center;
+      max-width: 1200px;
+   }
+
+   .tentang-text {
+      padding: 0 10px;
+   }
+
+   .landing h1 {
+      font-size: 28px;
+   }
+
+   .landing p {
+      font-size: 16px;
+   }
+
+   .button {
+      font-size: 14px;
+      padding: 8px 16px;
+   }
+
+   .edit-box {
+      padding: 15px;
+      font-size: 14px;
+   }
+
+   .edit-form input,
+   .edit-form textarea {
+      font-size: 14px;
+   }
+
+   .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+   }
+}
+
+.footer-nav {
+   background-color: rgb(56, 49, 49);
+   color: white;
+   padding: 40px 20px;
+}
+
+.footer-nav-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   justify-content: space-between;
+   max-width: 1200px;
+   margin: auto;
+}
+
+.footer-nav-logo img {
+   width: 120px;
+   border-radius: 10px;
+}
+
+.footer-nav-menu ul,
+.footer-nav-contact p {
+   margin: 0;
+   padding: 0;
+}
+
+.footer-nav-menu ul {
+   list-style: none;
+}
+
+.footer-nav-menu a {
+   text-decoration: none;
+   color: black;
+   display: block;
+   margin-bottom: 8px;
+}
+
+.footer-nav-menu a:hover {
+   color: gray;
+}
+
+.main-footer {
+   background-color: gray;
+   text-align: center;
+   padding: 20px;
+   color: white;
+   font-size: 14px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+   .footer-nav-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   .footer-nav-menu,
+   .footer-nav-contact {
+      margin-top: 20px;
+   }
+}
